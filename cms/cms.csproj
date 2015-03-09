@@ -1,0 +1,238 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0F83350-F357-427E-8A04-571DADCD5BDF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cms</RootNamespace>
+    <AssemblyName>cms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK, Version=2.0.6.0, Culture=neutral, PublicKeyToken=9f476d3089b52be3, processorArchitecture=MSIL" />
+    <Reference Include="BeITMemcached, Version=1.0.4589.22304, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\theme\blue.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\dataTables.bootstrap.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="img\login.jpg" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\dataTables.bootstrap.js" />
+    <Content Include="js\html5shiv.js" />
+    <Content Include="js\jquery-1.11.0.min.js" />
+    <Content Include="js\jquery-validate.bootstrap-tooltip.js" />
+    <Content Include="js\jquery.dataTables.min.js" />
+    <Content Include="js\jquery.validate.js" />
+    <Content Include="js\respond.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AWS_S3.cs" />
+    <Compile Include="buses.aspx.cs">
+      <DependentUpon>buses.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="buses.aspx.designer.cs">
+      <DependentUpon>buses.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clsDB.cs" />
+    <Compile Include="clsUtils.cs" />
+    <Compile Include="cms.ashx.cs">
+      <DependentUpon>cms.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="cms_upload_bus_pix.aspx.cs">
+      <DependentUpon>cms_upload_bus_pix.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cms_upload_bus_pix.aspx.designer.cs">
+      <DependentUpon>cms_upload_bus_pix.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="company.aspx.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company.aspx.designer.cs">
+      <DependentUpon>company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\company.ashx.cs">
+      <DependentUpon>company.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\seo.ashx.cs">
+      <DependentUpon>seo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="handler\trip.ashx.cs">
+      <DependentUpon>trip.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="new_company.aspx.cs">
+      <DependentUpon>new_company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="new_company.aspx.designer.cs">
+      <DependentUpon>new_company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seo_operator_content.aspx.cs">
+      <DependentUpon>seo_operator_content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seo_operator_content.aspx.designer.cs">
+      <DependentUpon>seo_operator_content.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\json\cms_login.json" />
+    <None Include="css\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="css\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="css\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="handler\trip.ashx" />
+    <Content Include="handler\seo.ashx" />
+    <Content Include="css\main.css" />
+    <Content Include="handler\company.ashx" />
+    <Content Include="buses.aspx" />
+    <Content Include="cms.ashx" />
+    <Content Include="cms_upload_bus_pix.aspx" />
+    <Content Include="company.aspx" />
+    <Content Include="css\jq-ui.css" />
+    <Content Include="css\jquery.fileupload-ui.css" />
+    <Content Include="css\summernote-bs3.css" />
+    <Content Include="css\summernote.css" />
+    <Content Include="css\theme\amelia.css" />
+    <Content Include="css\theme\bootstrap.css" />
+    <Content Include="css\theme\cerulean.css" />
+    <Content Include="css\theme\cosmo.css" />
+    <Content Include="css\theme\cyborg.css" />
+    <Content Include="css\theme\darkly.css" />
+    <Content Include="css\theme\flatly.css" />
+    <Content Include="css\theme\journal.css" />
+    <Content Include="css\theme\lumen.css" />
+    <Content Include="css\theme\readable.css" />
+    <Content Include="css\theme\simplex.css" />
+    <Content Include="css\theme\slate.css" />
+    <Content Include="css\theme\spacelab.css" />
+    <Content Include="css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="css\theme\superhero.css" />
+    <Content Include="css\theme\ty.css" />
+    <Content Include="css\theme\united.css" />
+    <Content Include="css\theme\yeti.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\animated-overlay.gif" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\pbar-ani.gif" />
+    <Content Include="img\sort-asc-disabled.png" />
+    <Content Include="img\sort-asc.png" />
+    <Content Include="img\sort-both.png" />
+    <Content Include="img\sort-desc-disabled.png" />
+    <Content Include="img\sort-desc.png" />
+    <Content Include="img\sprite-amenities.png" />
+    <Content Include="img\ty-logo.jpg" />
+    <Content Include="img\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="img\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="img\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="img\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="img\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="img\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="img\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="img\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="img\ui-icons_0073ea_256x240.png" />
+    <Content Include="img\ui-icons_454545_256x240.png" />
+    <Content Include="img\ui-icons_666666_256x240.png" />
+    <Content Include="img\ui-icons_ff0084_256x240.png" />
+    <Content Include="img\ui-icons_ffffff_256x240.png" />
+    <Content Include="js\buses.js" />
+    <Content Include="js\company.js" />
+    <Content Include="js\home.js" />
+    <Content Include="js\summernote.min.js" />
+    <Content Include="new_company.aspx" />
+    <Content Include="seo_operator_content.aspx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

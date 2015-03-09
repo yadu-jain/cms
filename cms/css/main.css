@@ -1,0 +1,22 @@
+﻿body
+{
+}
+
+/* home */
+.container{padding-top:60px!important;max-width:960px!important;}
+.toCap{text-transform:capitalize;}
+.topbuffer{margin-top:20px;}
+
+.icon{display:inline-block;width:16px;height:16px;vertical-align:bottom;margin-right:4px;opacity:0.6;filter:alpha(opacity=60);background:url(/../img/sprite-amenities.png) no-repeat;}
+.wifi{background-position:0 -6px;}
+.tv{background-position:-19px -6px;}
+.toilet{background-position:-35px -6px;}
+.snacks{background-position:-50px -6px;}
+.movie{background-position:-65px -6px;}
+.charging{background-position:-80px -6px;}
+.bottle{background-position:-96px 0;width:16px;height:22px;}
+.blanket{background-position:-114px -6px;}
+
+@media only screen and (max-width: 990px{)
+    .amn-cb-wrap{padding-left: 40px;}
+}

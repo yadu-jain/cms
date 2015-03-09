@@ -1,0 +1,6 @@
+05-05-2014 13:54:40: SaveImagesAtOnce: [System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.Object]][System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.Object]]Failed to get Link id !.
+05-05-2014 13:58:02: SaveImagesAtOnce: [System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.Object]][System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.Object]]Failed to get Link id !.
+05-05-2014 14:10:09: SaveImagesAtOnce: [System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.Object]][System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.Object]]Failed to get Link id !.
+05-05-2014 14:15:10: SaveImagesAtOnce: [System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.Object]][System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.Object]]Failed to get Link id !.
+05-05-2014 14:38:37: SaveImagesAtOnce: [System.Collections.Generic.Dictionary`2+KeyCollection[System.String,System.Object]][System.Collections.Generic.Dictionary`2+ValueCollection[System.String,System.Object]]Failed to get Link id !.
+2015-02-12 14:59:09: GetTripFeatues: [16867][4095]Object reference not set to an instance of an object..
